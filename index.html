@@ -47,18 +47,91 @@
     gtag('js', new Date());
     gtag('config', 'G-R39GW46RB4');
   </script>
+
+  <!-- Schema.org Yerel İşletme ve Hizmet Yapılandırılmış Verisi -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://bayrammuhendislik.com/#organization",
+        "name": "Bayram Mühendislik",
+        "alternateName": "Bayram Mühendislik PLC Otomasyon Çözümleri",
+        "image": "https://bayrammuhendislik.com/assets/logo.png",
+        "url": "https://bayrammuhendislik.com",
+        "telephone": "+905061492471",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Eskişehir",
+          "addressRegion": "Eskişehir",
+          "addressCountry": "TR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "39.7767",
+          "longitude": "30.5206"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+905061492471",
+          "contactType": "technical support",
+          "availableLanguage": "Turkish"
+        },
+        "sameAs": [
+          "https://wa.me/905061492471"
+        ]
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Siemens PLC Programlama ve Endüstriyel Otomasyon",
+        "provider": {
+          "@id": "https://bayrammuhendislik.com/#organization"
+        },
+        "areaServed": [
+          {
+            "@type": "State",
+            "name": "Eskişehir"
+          },
+          {
+            "@type": "State",
+            "name": "Isparta"
+          },
+          {
+            "@type": "Country",
+            "name": "Turkey"
+          }
+        ],
+        "description": "Siemens S7-1200, S7-1500 PLC yazılım geliştirme, TIA Portal, SCADA ve HMI ekran tasarımları, makine revizyonu ve pano devreye alma hizmetleri."
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="#anasayfa" class="brand" aria-label="Bayram Mühendislik ana sayfa">
-  <img src="assets/logo.png" alt="Bayram Mühendislik logosu">
-
-  <div class="brand-text">
-    <strong>Bayram Mühendislik</strong>
-    <span>PLC Otomasyon Çözümleri</span>
-  </div>
-</a>
+        <img src="assets/logo.png" alt="Bayram Mühendislik logosu" width="50" height="50">
+        <div class="brand-text">
+          <strong>Bayram Mühendislik</strong>
+          <span>PLC Otomasyon Çözümleri</span>
+        </div>
+      </a>
       <button class="menu-toggle" aria-label="Menüyü aç" aria-expanded="false">☰</button>
       <nav class="nav" aria-label="Ana menü">
         <a href="#hizmetler">Hizmetler</a>
@@ -207,7 +280,7 @@
   <footer>
     <div class="container footer-wrap">
       <div class="footer-brand">
-        <img src="assets/logo.png" alt="Bayram Mühendislik">
+        <img src="assets/logo.png" alt="Bayram Mühendislik" width="50" height="50">
         <span>PLC Otomasyon Çözümleri</span>
       </div>
       <p>© <span id="year"></span> Bayram Mühendislik. Tüm hakları saklıdır.</p>

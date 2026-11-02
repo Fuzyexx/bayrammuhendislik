@@ -3,7 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const root=process.cwd(), base='https://bayrammuhendislik.com/';
-const slugs=['plc-programlama','makine-revizyonu','endustriyel-ariza-servisi','hmi-scada','pano-tasarimi'];
+const slugs=['plc-programlama','makine-revizyonu','endustriyel-ariza-servisi','hmi-scada','pano-tasarimi','makina-demontaj-montaj'];
 const files=['index.html',...slugs.map(s=>s+'/index.html')];
 let links=0;
 for(const file of files){
@@ -24,7 +24,7 @@ for(const file of files){
  assert.match(h,/Temsili|temsili/);
 }
 const sitemap=fs.readFileSync('sitemap.xml','utf8');
-assert.equal((sitemap.match(/<loc>/g)||[]).length,6);
+assert.equal((sitemap.match(/<loc>/g)||[]).length,7);
 for(const s of ['',...slugs.map(s=>s+'/')])assert.ok(sitemap.includes('<loc>'+base+s+'</loc>'));
 const code=fs.readFileSync('analytics.js','utf8');
 function setup(host){const handlers={},appended=[];const context={location:{hostname:host,pathname:'/plc-programlama/',href:'https://'+host+'/plc-programlama/'},URL,window:{},document:{createElement:()=>({}),head:{appendChild:s=>appended.push(s)},addEventListener:(n,f)=>handlers[n]=f}};vm.runInNewContext(code,context);return {context,handlers,appended};}
@@ -38,4 +38,4 @@ for(const [href,event] of [['tel:+905061492471','phone_click'],['https://wa.me/9
 const count=prod.context.window.dataLayer.length;
 prod.handlers.click({target:{closest:()=>({href:'https://example.com/',classList:{contains:()=>false},closest:()=>null})}});
 assert.equal(prod.context.window.dataLayer.length,count);
-console.log(`PASS: 6 pages; ${links} internal URLs/anchors; metadata, JSON-LD, sitemap; production-only analytics and three contact event types.`);
+console.log(`PASS: 7 pages; ${links} internal URLs/anchors; metadata, JSON-LD, sitemap; production-only analytics and three contact event types.`);

@@ -40,3 +40,18 @@ node tests/check.mjs: 6 sayfa, 122 iç URL/dosya/çapa hedefi, tek H1, açıklam
 Tarayıcı: ana sayfa masaüstü ve 375px; PLC sayfası 375px ve 320px genişlikte taşma kontrolü geçti. Mobil menü açma/bağlantıyla kapama ve PLC SSS açma doğrulandı. Bütün cihaz kombinasyonları test edilmedi. Google Rich Results doğrulaması, PageSpeed/Core Web Vitals saha verisi ve GA4 canlı alım testi yapılmadı.
 
 Ana dala birleştirme ve yayın yapılmadı. Mevcut SMM/EKİPNET yetkinlik ifadesi bu çalışmada doğrulanmadı; yayın öncesinde işletme tarafından doğrulanmalıdır.
+
+## 2 Kasım 2026 — tasarım ve demontaj/montaj ek çalışması
+Tüm sayfalarda kırık beyaz/koyu zeytin/kiremit renkleri, keskin kenarlar, numaralı hizmet satırları ve teknik çizim dili uygulandı. Harici font isteği kaldırıldı; sistem yazı tipleri kullanılıyor. assets/control-cabinet.svg bu çalışma için yazılan özgün temsili vektör çizimdir; müşteri projesi veya uygulanabilir elektrik şeması değildir.
+
+Yeni /makina-demontaj-montaj/ sayfası eklendi. Kullanıcı elektrik, pano ve otomasyon işlerini kendisinin üstleneceğini, mekanik iş için ekip bulacağını belirtti. Bu nedenle mekanik ekip hazırmış gibi bir iddia yok: proje bazında ekip oluşturma ve uygunluk sonrası takvim belirtiliyor. Vinç ve nakliye otomatik dahil değil; sorumluluklar teklif öncesi belirleniyor.
+
+Araştırılan sorgular: “makine demontaj montaj elektrik otomasyon Eskişehir Bursa” ve “makina elektrik söküm montaj fabrika taşınma otomasyon”.
+- ERT Makina: https://www.ertmakina.com.tr/makina_demontaj_montaj.asp — arama özetinde Eskişehir/Odunpazarı adresi ve makina demontaj-montaj hizmeti görülüyor.
+- Orkut Elektromekanik: https://orkutelektrik.com.tr/endustriyel-makina-kurulum/ — makine elektrik tesisatı, pano bağlantıları, söküm ve yeniden kurulum dili görülüyor.
+- AYD Mekatronik: https://aydmekatronik.com/makina-tasima-kurulum/ — arama özetinde söküm, mekanik montaj, elektrik bağlantıları, test ve devreye alma birlikte sunuluyor.
+
+Çıkarım: Genel demontaj/montaj aramalarında mekanik ve nakliye beklentisi oluşabilir. Yeni sayfada kapsam ve sorumluluklar bu nedenle ilk ekranda ve SSS'de açıklanıyor. “Makina demontaj montaj”, “makine söküm montaj”, “makine elektrik montajı” araştırılacak adaylardır; aylık hacimleri ve organik rekabet puanları bilinmiyor. Rakibin “sıklıkla aranır” beyanı hacim kanıtı kabul edilmedi. Üst sıra veya iş hacmi garantisi yok.
+
+Statik kontrol: 7 sayfa, 147 iç bağlantı/dosya/çapa hedefi; metadata, JSON-LD, sitemap ve iletişim etkinliği testleri geçti.
+Tarayıcı tasarım kontrolü: ana sayfa 1440px ve 375px; yedi sayfanın tamamı 320px genişlikte taşmasız. Mobil menünün açılıp bağlantı seçildiğinde kapanması ve demontaj sayfasının SSS açılışı doğrulandı. ERT sayfası doğrudan açılarak Eskişehir adresi ve demontaj hizmeti doğrulandı; Orkut sayfasının doğrudan açılışı başarısız, kanıt arama özetiyle sınırlı.

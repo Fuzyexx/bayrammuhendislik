@@ -1,17 +1,21 @@
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
-toggle?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', String(open));
-});
-document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+function setMenu(open) {
+  nav?.classList.toggle('open', open);
+  toggle?.setAttribute('aria-expanded', String(open));
+  toggle?.setAttribute('aria-label', open ? 'Menüyü kapat' : 'Menüyü aç');
+}
+if (toggle && nav) {
+  document.documentElement.classList.add('menu-ready');
+  toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); toggle.focus(); }
   });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-document.getElementById('year').textContent = new Date().getFullYear();
+  document.addEventListener('click', event => {
+    if (!nav.contains(event.target) && !toggle.contains(event.target)) setMenu(false);
+  });
+  window.matchMedia('(min-width: 901px)').addEventListener('change', () => setMenu(false));
+}
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
